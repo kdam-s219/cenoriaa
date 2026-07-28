@@ -1,0 +1,13 @@
+asgiref==3.11.0
+Django==6.0
+django-ranged-response==0.2.0
+lxml==6.0.2
+pillow==12.1.0
+python-pptx==1.0.2
+sqlparse==0.5.5
+typing_extensions==4.15.0
+tzdata==2025.3
+xlsxwriter==3.2.9
+gunicorn>=20.1
+psycopg2-binary>=2.9
+

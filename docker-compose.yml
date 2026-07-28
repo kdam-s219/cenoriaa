@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:15
+    container_name: cenoria-db
+    restart: always
+    environment:
+      POSTGRES_DB: cenoriadb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secretpassword
+    volumes:
+      - cenoria-db-data:/var/lib/postgresql/data
+    networks:
+      - cenoria-network
+
+  web:
+    image: cenoria-app:1.1
+    container_name: cenoria-app-running
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - cenoria-network
+
+volumes:
+  cenoria-db-data:
+
+networks:
+  cenoria-network:
